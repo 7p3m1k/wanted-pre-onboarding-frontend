@@ -57,7 +57,7 @@ const Signin = () => {
             }
           )
           .then((res) => {
-            localStorage.setItem("login-token", res.data.access_token);
+            localStorage.setItem("access_token", res.data.access_token);
             alert("로그인 성공");
             navigate("/todo");
           });
@@ -69,8 +69,8 @@ const Signin = () => {
   );
 
   return (
-    <div className="login">
-      <div className="login-wrapper">
+    <div className="container">
+      <div className="wrapper">
         <form onSubmit={onSubmit}>
           <input
             data-testid="email-input"

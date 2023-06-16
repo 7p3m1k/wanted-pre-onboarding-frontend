@@ -68,8 +68,8 @@ const Signup = () => {
   );
 
   return (
-    <div className="login">
-      <div className="login-wrapper">
+    <div className="container">
+      <div className="wrapper">
         <form onSubmit={onSubmit}>
           <input
             data-testid="email-input"
