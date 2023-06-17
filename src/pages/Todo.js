@@ -67,6 +67,7 @@ const Todo = () => {
         dataId.current += 1;
         todoInput.current.value = "";
         todoList();
+        state.todo = "";
       })
       .catch((error) => {
         console.error("ERROR: ", error);
