@@ -6,7 +6,7 @@ import Todo from "./pages/Todo";
 
 function App() {
   return (
-    <BrowserRouter basename="https://7p3m1k.github.io/wanted-pre-onboarding-frontend/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <ul>
           <li>
