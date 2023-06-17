@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wanted-pre-onboarding-frontend/static/css/main.4d7cde85.css",
+    "main.js": "/wanted-pre-onboarding-frontend/static/js/main.a4a1c6a8.js",
+    "index.html": "/wanted-pre-onboarding-frontend/index.html",
+    "main.4d7cde85.css.map": "/wanted-pre-onboarding-frontend/static/css/main.4d7cde85.css.map",
+    "main.a4a1c6a8.js.map": "/wanted-pre-onboarding-frontend/static/js/main.a4a1c6a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d7cde85.css",
+    "static/js/main.a4a1c6a8.js"
+  ]
+}
