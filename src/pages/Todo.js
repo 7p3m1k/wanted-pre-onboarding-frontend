@@ -39,8 +39,6 @@ const Todo = () => {
   };
 
   const handleChangeState = (e) => {
-    console.log(e.target.value);
-
     setState({
       ...state,
       todo: e.target.value,
@@ -68,6 +66,26 @@ const Todo = () => {
       .then(() => {
         dataId.current += 1;
         todoInput.current.value = "";
+        todoList();
+      })
+      .catch((error) => {
+        console.error("ERROR: ", error);
+      });
+  };
+
+  const onDelete = (targetId) => {
+    axios
+      .delete(
+        `https://www.pre-onboarding-selection-task.shop/todos/${targetId}`,
+        {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("access_token"),
+          },
+        }
+      )
+      .then(() => {
+        const newTodoList = todos.filter((it) => it.id !== targetId);
+        setTodos(newTodoList);
       })
       .catch((error) => {
         console.error("ERROR: ", error);
@@ -89,7 +107,7 @@ const Todo = () => {
       </div>
       <ul className="todoList">
         {todos.map((todo) => {
-          return <TodoItem key={todo.id} {...todo} />;
+          return <TodoItem key={todo.id} onDelete={onDelete} {...todo} />;
         })}
       </ul>
     </div>
